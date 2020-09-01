@@ -7,7 +7,7 @@ namespace Dotmim.Sync
     /// <summary>
     /// Mapping sur la table ScopeInfo
     /// </summary>
-    [DataContract(Name = "server_scope"), Serializable]
+    [DataContract(Name = "serverscope"), Serializable]
     public class ServerScopeInfo
     {
         /// <summary>
@@ -39,8 +39,5 @@ namespace Dotmim.Sync
         /// </summary>
         [DataMember(Name = "lst", IsRequired = false, EmitDefaultValue = false, Order = 4)]
         public long LastCleanupTimestamp { get; set; }
-
-
-
     }
 }

@@ -37,7 +37,7 @@ namespace Dotmim.Sync
         public SyncType SyncType { get; set; }
 
         /// <summary>
-        /// Gets or Sets the current Sync direction. 
+        /// Gets or Sets the current Sync direction.
         /// When locally GetChanges and remote ApplyChanges, we are in Upload direction
         /// When remote GetChanges and locally ApplyChanges, we are in Download direction
         /// this Property is used to check SyncDirection on each table.
@@ -80,13 +80,13 @@ namespace Dotmim.Sync
         /// <param name="otherSyncContext"></param>
         public void CopyTo(SyncContext otherSyncContext)
         {
-            otherSyncContext.Parameters = this.Parameters;
-            otherSyncContext.ScopeName = this.ScopeName;
             otherSyncContext.SessionId = this.SessionId;
-            otherSyncContext.SyncStage = this.SyncStage;
+            otherSyncContext.ClientScopeId = this.ClientScopeId;
+            otherSyncContext.ScopeName = this.ScopeName;
             otherSyncContext.SyncType = this.SyncType;
             otherSyncContext.SyncWay = this.SyncWay;
-
+            otherSyncContext.SyncStage = this.SyncStage;
+            otherSyncContext.Parameters = this.Parameters;
         }
 
         /// <summary>
