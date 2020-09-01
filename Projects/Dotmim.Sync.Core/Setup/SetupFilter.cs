@@ -48,7 +48,7 @@ namespace Dotmim.Sync
         /// <summary>
         /// Side where filters list
         /// </summary>
-        [DataMember(Name = "w", IsRequired = false, EmitDefaultValue = false, Order = 5)]
+        [DataMember(Name = "w", IsRequired = false, EmitDefaultValue = false, Order = 6)]
         public List<SetupFilterWhere> Wheres { get; } = new List<SetupFilterWhere>();
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Dotmim.Sync
         }
 
         /// <summary>
-        /// Add a parameter based on a column. 
+        /// Add a parameter based on a column.
         /// For SQL Server, parameter will be added as @{parameterName}
         /// For MySql, parameter will be added as in_{parameterName}
         /// </summary>
@@ -94,7 +94,7 @@ namespace Dotmim.Sync
 
 
         /// <summary>
-        /// Add a parameter based on a column. 
+        /// Add a parameter based on a column.
         /// For SQL Server, parameter will be added as @{parameterName}
         /// For MySql, parameter will be added as in_{parameterName}
         /// </summary>
@@ -122,7 +122,7 @@ namespace Dotmim.Sync
 
 
         /// <summary>
-        /// Add a Where clause. 
+        /// Add a Where clause.
         /// </summary>
         public SetupFilter AddWhere(string columnName, string tableName, string parameterName, string schemaName = null)
         {
@@ -134,7 +134,7 @@ namespace Dotmim.Sync
         }
 
         /// <summary>
-        /// Add a custom Where clause. 
+        /// Add a custom Where clause.
         /// </summary>
         public SetupFilter AddCustomWhere(string where)
         {
@@ -195,6 +195,6 @@ namespace Dotmim.Sync
             return true;
         }
 
-     
+
     }
 }
