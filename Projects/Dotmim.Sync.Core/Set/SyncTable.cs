@@ -21,9 +21,6 @@ namespace Dotmim.Sync
     [DataContract(Name = "st"), Serializable]
     public class SyncTable : SyncNamedItem<SyncTable>, IDisposable
     {
-        [NonSerialized]
-        private SyncRows rows;
-
         /// <summary>
         /// Gets or sets the name of the table that the DmTableSurrogate object represents.
         /// </summary>
@@ -43,7 +40,7 @@ namespace Dotmim.Sync
         public string OriginalProvider { get; set; }
 
         /// <summary>
-        /// Gets or Sets the Sync direction (may be Bidirectional, DownloadOnly, UploadOnly) 
+        /// Gets or Sets the Sync direction (may be Bidirectional, DownloadOnly, UploadOnly)
         /// Default is Bidirectional
         /// </summary>
         [DataMember(Name = "sd", IsRequired = false, EmitDefaultValue = false, Order = 4)]
@@ -66,12 +63,7 @@ namespace Dotmim.Sync
         /// Gets the ShemaTable's rows
         /// </summary>
         [IgnoreDataMember]
-        public SyncRows Rows
-        {
-            // Use of field property because of attribute [NonSerialized] necessary for binaryformatter
-            get => rows;
-            private set => rows = value;
-        }
+        public SyncRows Rows { get; set; }
 
         /// <summary>
         /// Gets the ShemaTable's SyncSchema
@@ -189,7 +181,7 @@ namespace Dotmim.Sync
         /// Gets the full name of the table, based on schema name + "." + table name (if schema name exists)
         /// </summary>
         /// <returns></returns>
-        public string GetFullName() 
+        public string GetFullName()
             => string.IsNullOrEmpty(this.SchemaName) ? this.TableName : $"{this.SchemaName}.{this.TableName}";
 
 
