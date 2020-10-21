@@ -65,6 +65,7 @@ namespace Dotmim.Sync
         [IgnoreDataMember]
         public SyncRows Rows { get; set; }
 
+
         /// <summary>
         /// Gets the ShemaTable's SyncSchema
         /// </summary>
