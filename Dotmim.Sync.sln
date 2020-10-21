@@ -36,7 +36,6 @@ ProjectSection(SolutionItems) = preProject
 	CreateAdventureWorks.sql = CreateAdventureWorks.sql
 	CreateMySqlAdventureWorks.sql = CreateMySqlAdventureWorks.sql
 	deletebon.ps1 = deletebon.ps1
-	Dotmim.Sync.sln = Dotmim.Sync.sln
 	Jenkinsfile = Jenkinsfile
 	LICENSE = LICENSE
 	Readme.md = Readme.md
