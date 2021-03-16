@@ -30,7 +30,7 @@ timestamps {
 
 def String pushPackage(String path, String packageName) {
     def file = getPackageFile(path, packageName)
-    sh "dotnet nuget push ${file} -s http://10.17.11.17:5500/v3/index.json -k NUGET-SERVER-API-KEY"
+    sh "dotnet nuget push ${file} -s https://pkgs.dev.azure.com/ffm-vic-apps/_packaging/nuget-feed/nuget/v3/index.json -k NUGET-SERVER-API-KEY"
 }
 
 def String getPackageFile(String path, String packageName) {
