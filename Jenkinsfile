@@ -16,7 +16,7 @@ timestamps {
                 sh "dotnet build Projects/Dotmim.Sync.Web.Client/Dotmim.Sync.Web.Client.csproj -c Release -f netstandard2.0 -o ${WORKSPACE}/${BUILD_NUMBER}/Dotmim.Sync.Web.Client --version-suffix ${suffix}"
                 sh "dotnet build Projects/Dotmim.Sync.Web.Server/Dotmim.Sync.Web.Server.csproj -c Release -f netstandard2.0 -o ${WORKSPACE}/${BUILD_NUMBER}/Dotmim.Sync.Web.Server --version-suffix ${suffix}"
             }
-            stage('Push to Baget') {
+            stage('Push to Azure') {
                 pushPackage("${WORKSPACE}/${BUILD_NUMBER}", "Dotmim.Sync.Core")
                 pushPackage("${WORKSPACE}/${BUILD_NUMBER}", "Dotmim.Sync.SqlServer")
                 pushPackage("${WORKSPACE}/${BUILD_NUMBER}", "Dotmim.Sync.SqlServer.ChangeTracking")
