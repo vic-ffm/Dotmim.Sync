@@ -39,6 +39,7 @@ ProjectSection(SolutionItems) = preProject
 	Jenkinsfile = Jenkinsfile
 	LICENSE = LICENSE
 	Readme.md = Readme.md
+	NuGet.Config = NuGet.Config
 EndProjectSection
 EndProject
 Global
